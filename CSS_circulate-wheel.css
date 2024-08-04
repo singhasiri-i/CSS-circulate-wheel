@@ -1,0 +1,43 @@
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: white;
+    border: 20px solid rgb(255, 182, 193);
+    opacity: 0.3;
+
+    margin: auto;
+    position: relative;
+}
+
+.spinning {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: transparent;
+    border: 20px solid deeppink;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+
+    position: absolute;
+    top: -20px;
+    left: -20px;
+
+    animation: spin 10s steps(50, jump-start) 0s infinite normal;
+    /*animation-name: spin;
+    animation-duration: 10s;
+    animation-timing-function: steps(50, jump-start);
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;*/
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
